@@ -26,4 +26,3 @@ print(f"Execution time: {elapsed_time} seconds")
 # binary search
 half_max = (max - min) // 2 
 
-# test 2 
