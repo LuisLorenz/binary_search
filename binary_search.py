@@ -3,7 +3,7 @@ import time
 
 # number list
 min = 1
-max = 100001
+max = 100001 # do I have to correct here something? 
 numbers = list(range(min, max))
 
 # random_number
@@ -23,6 +23,24 @@ for x in numbers:
 elapsed_time = end_time - start_time
 print(f"Execution time: {elapsed_time} seconds")
 
+
+# start the record
+start_time = time.time()
+
 # binary search
-half_max = (max - min) // 2 
+result = None
+while result != random_num: 
+    half = (max + min) // 2 
+    if random_num > half:
+        min = half + 1
+    elif random_num < half:
+        max = half - 1
+    else:
+        # stop the record
+        end_time = time.time()
+        print(f'The searched int is {half}.')
+        elapsed_time = end_time - start_time
+        print(f"Execution time: {elapsed_time} seconds")    
+        result = half 
+
 
